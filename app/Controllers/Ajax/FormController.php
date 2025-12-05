@@ -29,6 +29,8 @@ class FormController extends BaseController
 		});
 		$words = array_count_values($words);
 		$result = [];
+		
+		ksort($words);
 
 		foreach ($words as $key => $value) {
 			$data = [
