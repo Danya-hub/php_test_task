@@ -14,7 +14,7 @@ class Auth {
 		$user = $model->where('ip', $ip)->first();
 
 		if (isset($user)) {
-			return $user;
+			return $user['id'];
 		}
 
         return $model->insert([
